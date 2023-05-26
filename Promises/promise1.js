@@ -20,6 +20,15 @@
  *          cb= (resolve,reject) => {}   // it takes 2 arguments resolve and reject
  *   7--> Promise executes both synchronous and asynchronous code 
  *        Example of synchronous behaviour of the promises 
+ *   -- Promises lecture 2 points --
+ * 
+ * 8-->  each promise object has : * state
+ *                                 * value
+ *                                 * onFulfillment: [] array
+ *                                 * onRejection: [] array
+ *                          
+ * 
+ *    -- Promises lecture 2 points ends --
  *    function getRandomInt(num) {
  *           return Math.floor(Math.random()*num);
  *       }
@@ -34,8 +43,10 @@
  *        
  *   let x= createPromiseWithLoop(); // after this line it takes some time to log the x 
  *     // because in the promise call back the for loop takes time 
- *    8--> the promise object returns immediately after completing the execution of the executor function
- *    console.log(x);   
+ *    9--> the promise object returns immediately after completing the execution of the executor function
+ *    console.log(x); 
+ *  10 --> promiseObject.then is used to register the fulfillment or rejection callback functions only
+ *    
  *  -- important done --
  *   inversion of control example:
  *     function f(cb) {
